@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Result</title>
+  <link rel="stylesheet" href="/style.css"> 
+</head>
+<body>
+
+<div class="page-wrap">
+  <div class="score-page">
+
+    <div class="final-score-box">
+      <span class="score-label">Final Score</span>
+      <h1 class="score-display"><%= score1 %> / 10</h1>
+    </div>
+
+    <% if (score1 >= 9) { %>
+      <div class="score-verdict">🏆 Outstanding!</div>
+      <p class="score-msg">You nailed it. Truly impressive.</p>
+    <% } else if (score1 >= 5) { %>
+      <div class="score-verdict">👍 Well Done!</div>
+      <p class="score-msg">Decent effort! You're getting there.</p>
+    <% } else { %>
+      <div class="score-verdict">📚 Keep Going!</div>
+      <p class="score-msg">Every attempt is a step forward. Try again!</p>
+    <% } %>
+
+    <a href="/" class="btn-home">← Back to Home</a>
+
+  </div>
+</div>
+
+</body>
+</html>
